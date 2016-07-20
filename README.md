@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/sotetsuk/redpen-ja-translation.svg?branch=master)](https://travis-ci.org/sotetsuk/redpen-ja-translation)
+
 # 技術書日本語訳用RedPenテンプレート
 
 ## 趣旨
