@@ -1,0 +1,12 @@
+language:
+   - java
+
+jdk:
+   - oraclejdk8
+
+install:
+   - wget https://github.com/redpen-cc/redpen/releases/download/redpen-1.6.2/redpen-1.6.2.tar.gz && tar xvf redpen-1.6.2.tar.gz
+   - export PATH=$PATH:$PWD/redpen-distribution-1.6.2/bin
+
+script:
+   - redpen -c redpen-conf.xml -f latex main.tex
