@@ -1,6 +1,7 @@
 <redpen-conf lang="ja" type="zenkaku2">
     <validators>
         <validator name="SuccessiveWord" />
+        <validator name="InvalidSymbol" />
     </validators>
     <symbols>
         <symbol name="FULL_STOP" value="．" invalid-chars="。." />

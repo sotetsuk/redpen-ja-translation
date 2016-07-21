@@ -7,6 +7,15 @@ jdk:
 install:
    - wget https://github.com/redpen-cc/redpen/releases/download/redpen-1.6.2/redpen-1.6.2.tar.gz && tar xvf redpen-1.6.2.tar.gz
    - export PATH=$PATH:$PWD/redpen-distribution-1.6.2/bin
+   - function t() { redpen -c redpen-conf.xml -f latex $@ -l 0; };
+   - function f() { redpen -c redpen-conf.xml -f latex $@ -l 0; if [ $? = 1 ]; then return 0; else return 1; fi };
 
 script:
-   - redpen -c redpen-conf.xml -f latex main.tex
+   - t main.tex
+   # RULE 01 句読点
+   - t tex/rule1-pos1.tex
+   - t tex/rule1-pos2.tex
+   - f tex/rule1-neg1.tex
+   - f tex/rule1-neg2.tex
+   - f tex/rule1-neg3.tex
+   - f tex/rule1-neg4.tex
