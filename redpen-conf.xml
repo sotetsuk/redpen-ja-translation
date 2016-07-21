@@ -2,9 +2,15 @@
     <validators>
         <validator name="SuccessiveWord" />
         <validator name="InvalidSymbol" />
+        <validator name="SymbolWithSpace" />
     </validators>
     <symbols>
-        <symbol name="FULL_STOP" value="．" invalid-chars="。." />
-        <symbol name="COMMA" value="，" invalid-chars="、,"/>
+        <symbol name="FULL_STOP" value="．" before-space="false" after-space="false" invalid-chars="。." />
+        <symbol name="COMMA" value="，" before-space="false" after-space="false" invalid-chars="、," />
+        <symbol name="COLON" value=":" before-space="false" after-space="true" invalid-chars="：" />
+        <symbol name="SEMICOLON" value=";" before-space="false" after-space="true" invalid-chars="；" />
+        <symbol name="QUESTION_MARK" value="？" before-space="false" after-space="false" invalid-chars="?" />
+        <symbol name="EXCLAMATION_MARK" value="！" before-space="false" after-space="false" invalid-chars="!" />
+        <symbol name="SPACE" value=" " before-space="false" after-space="false" invalid-chars="　" />
     </symbols>
 </redpen-conf>

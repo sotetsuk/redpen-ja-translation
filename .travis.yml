@@ -12,10 +12,23 @@ install:
 
 script:
    - t main.tex
-   # RULE 01 句読点
+   ##### RULE 01 記号に関する規約 #####
+   # 句読点
    - t tex/rule1-pos1.tex
    - t tex/rule1-pos2.tex
    - f tex/rule1-neg1.tex
    - f tex/rule1-neg2.tex
    - f tex/rule1-neg3.tex
    - f tex/rule1-neg4.tex
+   # コロン
+   - t tex/rule1-pos3.tex
+   - f tex/rule1-neg5.tex
+   # セミコロン
+   - t tex/rule1-pos4.tex
+   - f tex/rule1-neg6.tex
+   # クエスチョンマーク
+   - t tex/rule1-pos5.tex
+   - f tex/rule1-neg7.tex
+   # エクステンションマーク
+   - t tex/rule1-pos6.tex
+   - f tex/rule1-neg8.tex
