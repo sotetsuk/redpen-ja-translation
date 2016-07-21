@@ -1,8 +1,14 @@
 <redpen-conf lang="ja" type="zenkaku2">
     <validators>
-        <validator name="SuccessiveWord" />
+        <validator name="SentenceLength">
+            <property name="max_len" value="150" />
+        </validator>
+        <validator name="CommaNumber">
+            <property name="max_num" value="5" />
+        </validator>
         <validator name="InvalidSymbol" />
         <validator name="SymbolWithSpace" />
+        <validator name="SuccessiveWord" />
     </validators>
     <symbols>
         <symbol name="FULL_STOP" value="．" before-space="false" after-space="false" invalid-chars="。." />

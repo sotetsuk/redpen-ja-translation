@@ -23,12 +23,24 @@ script:
    # コロン
    - t tex/rule1-pos3.tex
    - f tex/rule1-neg5.tex
+   - f tex/rule1-neg6.tex
    # セミコロン
    - t tex/rule1-pos4.tex
-   - f tex/rule1-neg6.tex
+   - f tex/rule1-neg7.tex
+   - f tex/rule1-neg8.tex
    # クエスチョンマーク
    - t tex/rule1-pos5.tex
-   - f tex/rule1-neg7.tex
+   - f tex/rule1-neg9.tex
    # エクステンションマーク
    - t tex/rule1-pos6.tex
-   - f tex/rule1-neg8.tex
+   - f tex/rule1-neg10.tex
+   # スペース
+   - t tex/rule1-pos7.tex
+   - f tex/rule1-neg11.tex
+   ##### RULE 02 文長に関する規約 #####
+   # 文長
+   - t tex/rule2-pos1.tex
+   - f tex/rule2-neg1.tex
+   # コンマ数
+   - t tex/rule2-pos2.tex
+   - f tex/rule2-neg2.tex
