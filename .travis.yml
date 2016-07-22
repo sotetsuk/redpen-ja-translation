@@ -38,8 +38,8 @@ script:
    - t tex/rule1-pos7.tex
    - f tex/rule1-neg11.tex
    # ダブルコーテーション
-   - t tex/rule1-pos8.tex
-   - t tex/rule1-neg12.tex
+   # - t tex/rule1-pos8.tex
+   # - t tex/rule1-neg12.tex
    ##### RULE 02 文長に関する規約 #####
    # 文長
    - t tex/rule2-pos1.tex

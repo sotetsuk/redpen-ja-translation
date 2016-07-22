@@ -6,9 +6,6 @@
         <validator name="CommaNumber">
             <property name="max_num" value="5" />
         </validator>
-        <validator name="InvalidWord">
-            <property name="list" value="&quot;" />
-        </validator>
         <validator name="InvalidSymbol" />
         <validator name="SymbolWithSpace" />
         <validator name="SuccessiveWord" />
