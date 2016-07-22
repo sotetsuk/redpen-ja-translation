@@ -18,6 +18,9 @@
             <!-- <property name="dict" value="" /> -->
             <property name="min_freq" value="10" />
         </validator>
+        <validator name="FrequentSentenceStart">
+            <property name="leading_word_limit" value="2" />
+        </validator>
         <!-- RULE05 -->
         <validator name="SuccessiveWord" />
     </validators>

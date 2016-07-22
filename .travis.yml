@@ -54,3 +54,6 @@ script:
    # カタカナ単語のゆらぎ
    - t tex/rule3-pos2.tex tex/rule3-pos3.tex
    - f tex/rule3-neg2.tex tex/rule3-neg3.tex
+   # 同じ文頭表現を過度に使わない
+   - t tex/rule3-pos4.tex
+   - f tex/rule3-neg4.tex
