@@ -50,3 +50,5 @@ script:
    ##### RULE 03 日本語表現に関する規約 #####
    - t tex/rule3-pos1.tex
    - f tex/rule3-neg1.tex
+   - t tex/rule3-pos2.tex tex/rule3-pos3.tex
+   - f tex/rule3-neg2.tex tex/rule3-neg3.tex

@@ -13,8 +13,12 @@
         <!-- RULE 03 -->
         <validator name="JapaneseNumberExpression">
             <property name="mode" value="numeric" />
-        <!-- RULE05 -->
         </validator>
+        <validator name="KatakanaSpellCheck">
+            <!-- <property name="dict" value="" /> -->
+            <property name="min_freq" value="10" />
+        </validator>
+        <!-- RULE05 -->
         <validator name="SuccessiveWord" />
     </validators>
     <symbols>
