@@ -29,6 +29,9 @@
             <property name="max_len" value="5" />
         </validator>
         <validator name="DoubleNegative" />
+        <validator name="SuggestExpression">
+          <property name="dict" value="resources/invalid-expression.tsv" />
+        </validator>
         <!-- RULE05 -->
         <validator name="SuccessiveWord" />
     </validators>

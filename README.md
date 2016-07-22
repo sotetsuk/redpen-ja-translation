@@ -49,10 +49,10 @@
 - カタカナ単語の語尾を適切にする（例外リスト）（RedPen: KatakanaEndHyphen）
 - 漢字の連続は **_5_** 文字まで（RedPen: LongKanjiChain）
 - 二重否定を使わない（RedPen: DoubleNegative）
+- 不適切な語の出現を弾く（リスト）（RedPen: SuggestExpression）
+  - e.g., ```TODO```、本の中での```本稿```
 - [TODO] 送り仮名を統一する（リスト）（漢字かひらがなか）
   - e.g., 行なう、満たす、時、例えば
-- [TODO] 不適切な語の出現を弾く（リスト）（RedPen: SuggestExpression）
-  - e.g., ```TODO```、本の中での```本稿```
 
 ### 04 翻訳特有の規約
 

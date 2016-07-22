@@ -68,4 +68,7 @@ script:
    - f tex/rule3-neg7.tex
    # 二重否定を使わない
    - t tex/rule3-pos8.tex
-   - f tex/rule3-neg8.tex   
+   - f tex/rule3-neg8.tex
+   # 二重否定を使わない
+   - t tex/rule3-pos9.tex
+   - f tex/rule3-neg9.tex
