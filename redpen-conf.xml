@@ -1,13 +1,17 @@
 <redpen-conf lang="ja" type="zenkaku2">
     <validators>
+        <!-- RULE 01 -->
+        <validator name="InvalidSymbol" />
+        <validator name="SymbolWithSpace" />
+        <!-- RULE 02 -->
         <validator name="SentenceLength">
             <property name="max_len" value="150" />
         </validator>
         <validator name="CommaNumber">
             <property name="max_num" value="5" />
         </validator>
-        <validator name="InvalidSymbol" />
-        <validator name="SymbolWithSpace" />
+        <!-- RULE05 -->
+        </validator>
         <validator name="SuccessiveWord" />
     </validators>
     <symbols>
