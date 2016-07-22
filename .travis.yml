@@ -48,7 +48,9 @@ script:
    - t tex/rule2-pos2.tex
    - f tex/rule2-neg2.tex
    ##### RULE 03 日本語表現に関する規約 #####
+   # 数値表現の統一
    - t tex/rule3-pos1.tex
    - f tex/rule3-neg1.tex
+   # カタカナ単語のゆらぎ
    - t tex/rule3-pos2.tex tex/rule3-pos3.tex
    - f tex/rule3-neg2.tex tex/rule3-neg3.tex
