@@ -10,6 +10,9 @@
         <validator name="CommaNumber">
             <property name="max_num" value="5" />
         </validator>
+        <!-- RULE 03 -->
+        <validator name="JapaneseNumberExpression">
+            <property name="mode" value="numeric" />
         <!-- RULE05 -->
         </validator>
         <validator name="SuccessiveWord" />

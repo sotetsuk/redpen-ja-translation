@@ -47,3 +47,6 @@ script:
    # コンマ数
    - t tex/rule2-pos2.tex
    - f tex/rule2-neg2.tex
+   ##### RULE 03 日本語表現に関する規約 #####
+   - t tex/rule3-pos1.tex
+   - f tex/rule3-neg1.tex
