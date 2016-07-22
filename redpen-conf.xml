@@ -28,6 +28,7 @@
         <validator name="LongKanjiChain">
             <property name="max_len" value="5" />
         </validator>
+        <validator name="DoubleNegative" />
         <!-- RULE05 -->
         <validator name="SuccessiveWord" />
     </validators>
