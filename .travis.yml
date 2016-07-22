@@ -57,3 +57,6 @@ script:
    # 同じ文頭表現を過度に使わない
    - t tex/rule3-pos4.tex
    - f tex/rule3-neg4.tex
+   # 「の」を過度に連続して使わない
+   - t tex/rule3-pos5.tex
+   - f tex/rule3-neg5.tex   

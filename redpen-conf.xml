@@ -21,6 +21,7 @@
         <validator name="FrequentSentenceStart">
             <property name="leading_word_limit" value="2" />
         </validator>
+        <validator name="JapaneseAmbiguousNounConjunction" />
         <!-- RULE05 -->
         <validator name="SuccessiveWord" />
     </validators>
