@@ -25,6 +25,9 @@
         <validator name="KatakanaEndHyphen">
             <!-- <property name="list" value="" /> -->
         </validator>
+        <validator name="LongKanjiChain">
+            <property name="max_len" value="5" />
+        </validator>
         <!-- RULE05 -->
         <validator name="SuccessiveWord" />
     </validators>

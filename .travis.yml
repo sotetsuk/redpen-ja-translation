@@ -63,3 +63,6 @@ script:
    # カタカナ単語の語尾を適切にする
    - t tex/rule3-pos6.tex
    - f tex/rule3-neg6.tex
+   # 漢字の連続は5文字まで
+   - t tex/rule3-pos7.tex
+   - f tex/rule3-neg7.tex
