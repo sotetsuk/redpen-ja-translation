@@ -46,7 +46,7 @@
   - e.g., ```オペレーションズ・リサーチ``` vs ```オペレーションズリサーチ```
 - 同じ文頭表現を過度に利用しない（RedPen: FrequentSentenceStart）
 - 「の」を過度に繰り返えさない（RedPen: JapaneseAmbiguousNounConjunction）
-- [TODO] カタカナ単語の語尾を適切にする（例外リスト）（RedPen: KatakanaEndHyphen）
+- カタカナ単語の語尾を適切にする（例外リスト）（RedPen: KatakanaEndHyphen）
 - [TODO] 過度に連続した漢字を使わない（RedPen: LongKanjiChain）
 - [TODO] 二重否定を使わない（RedPen: DoubleNegative）
 - [TODO] 送り仮名を統一する（リスト）（漢字かひらがなか）

@@ -22,6 +22,9 @@
             <property name="leading_word_limit" value="2" />
         </validator>
         <validator name="JapaneseAmbiguousNounConjunction" />
+        <validator name="KatakanaEndHyphen">
+            <!-- <property name="list" value="" /> -->
+        </validator>
         <!-- RULE05 -->
         <validator name="SuccessiveWord" />
     </validators>
