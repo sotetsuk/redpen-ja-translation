@@ -72,3 +72,6 @@ script:
    # 二重否定を使わない
    - t tex/rule3-pos9.tex
    - f tex/rule3-neg9.tex
+   # 漢字かひらがなか、送り仮名
+   - t tex/rule3-pos10.tex
+   - f tex/rule3-neg10.tex

@@ -32,6 +32,10 @@
         <validator name="SuggestExpression">
           <property name="dict" value="resources/invalid-expression.tsv" />
         </validator>
+        <validator name="SuggestExpression">
+          <property name="dict" value="resources/kanji-kana.tsv" />
+        </validator>
+        <validator name="Okurigana" />
         <!-- RULE05 -->
         <validator name="SuccessiveWord" />
     </validators>
