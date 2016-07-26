@@ -9,8 +9,9 @@ Options:
   -h --help             Show this screen.
 """
 
-from docopt import docopt
+from utils import get_dict, LaTeXReader
 
+from docopt import docopt
 from logging import getLogger, StreamHandler, INFO
 
 logger = getLogger(__name__)
@@ -18,50 +19,6 @@ handler = StreamHandler()
 handler.setLevel(INFO)
 logger.setLevel(INFO)
 logger.addHandler(handler)
-
-
-def get_dict(path):
-    logger.debug("read dict from " + path)
-
-    try:
-        with open(path, 'r') as f:
-            lines = f.readlines()
-    except:
-        raise IOError("failed to load " + path)
-
-    dic = [[x.strip('\n').strip() for x in line.split('\t')] for line in lines]
-    for line in dic:
-        if len(line) > 2:
-            raise IOError("failed to parse " + path)
-
-    return dic
-
-
-class LaTeXReader(object):
-
-    def __init__(self, path):
-        self.path = path
-
-    def __iter__(self):
-
-        with open(self.path, 'r') as f:
-            line_no = 1
-            ret = []
-            flg = False
-            for line in f:
-                if flg:
-                    ret.append(line)
-                    flg = False
-                    logger.debug("read line pair from " + self.path)
-                    yield ret
-                    ret = []
-
-                if line.startswith('%'):
-                    ret.append(line_no)
-                    ret.append(line)
-                    flg = True
-
-                line_no += 1
 
 
 def validate(dic, iter_reader):
