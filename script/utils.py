@@ -1,4 +1,27 @@
-def get_dict(path):
+def load_list(path):
+    """Load list file.
+
+    :type path: str
+    :param path: path to txt file
+    :rtype: dict
+    :return:
+
+    Example:
+    >>> l = laod_list("../resources/modifier.txt")
+    """
+
+    try:
+        with open(path, 'r') as f:
+            lines = f.readlines()
+    except:
+        raise IOError("failed to load " + path)
+
+    l = [line.strip().strip('\n') for line in lines]
+
+    return l
+
+
+def load_dict(path):
     """Load tsv dictionary file.
 
     :type path: str
@@ -7,7 +30,7 @@ def get_dict(path):
     :return:
 
     Example:
-    >>> dic = get_dict("../resources/term-dic.tsv")
+    >>> dic = load_dict("../resources/term-dic.tsv")
     """
 
     try:

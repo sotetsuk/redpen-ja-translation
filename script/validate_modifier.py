@@ -1,15 +1,15 @@
-"""Validate that a specific Japanese word is always assigned to a certain English word
+"""Validate that the same modifier is also used in translated sentence.
 
 Usage:
-  validate_terms.py <dict> <texfile>
-  validate_terms.py (-h | --help)
+  validate_modifier.py <list> <texfile>
+  validate_modifier.py (-h | --help)
 Options:
-  <dict>                tsv file which contains English key and Japanese values
+  <list>                list of modifier (e.g., \em, \bf)
   <texfile>             tex file to be checked
   -h --help             Show this screen.
 """
 
-from utils import load_dict, LaTeXReader
+from utils import load_list, LaTeXReader
 
 from docopt import docopt
 from logging import getLogger, StreamHandler, INFO
@@ -21,35 +21,35 @@ logger.setLevel(INFO)
 logger.addHandler(handler)
 
 
-def validate_terms(dic, iter_reader):
+def validate_modifier(l, iter_reader):
     code = 0
 
     for line_no, en, ja in iter_reader:
         en_lower = en.lower()
-        for key, val in dic:
-            if key in en_lower:
-                if val not in ja:
-                    error_msg = "[Term validation error] Found '{}' in L{} but Not found '{}' in L{}\n"\
-                        .format(key, line_no, val, line_no + 1)
+        for mod in l:
+            if mod in en_lower:
+                if mod not in ja:
+                    error_msg = "[Modifier validation error] Found '{}' in L{} but Not found '{}' in L{}\n" \
+                        .format(mod, line_no, mod, line_no + 1)
                     error_msg += "  L{}: {}\n".format(line_no, en.strip('\n'))
                     error_msg += "  L{}: {}".format(line_no + 1, ja.strip('\n'))
                     logger.error(error_msg)
                     code = 1
                 else:
-                    logger.info("[Successful term validation] L{}: {}, L{}, {}".format(line_no, key, line_no + 1, val))
+                    logger.info("[Successful Modifier validation] L{}: {}, L{}, {}".format(line_no, mod, line_no + 1, mod))
 
     return code
 
 
 def main():
     args = docopt(__doc__)
-    dic_path = args['<dict>']
+    list_path = args['<list>']
     tex_file = args['<texfile>']
 
-    dic = load_dict(dic_path)
+    l = load_list(list_path)
     reader = LaTeXReader(tex_file)
 
-    code = validate_terms(dic, reader)
+    code = validate_modifier(l, reader)
     exit(code)
 
 

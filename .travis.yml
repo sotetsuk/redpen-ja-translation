@@ -82,3 +82,6 @@ script:
    # 不適切な訳語を使わない
    - t tex/rule4-pos2.tex
    - f tex/rule4-neg2.tex
+   # 文字修飾を原文に統一する
+   # - python script/validate_modifier.py resources/modifier.txt tex/rule4-pos3.tex
+   # - python script/validate_modifier.py resources/modifier.txt tex/rule4-neg3.tex
