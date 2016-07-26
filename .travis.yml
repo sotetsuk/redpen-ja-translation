@@ -75,3 +75,7 @@ script:
    # 漢字かひらがなか、送り仮名
    - t tex/rule3-pos10.tex
    - f tex/rule3-neg10.tex
+   ##### RULE04 翻訳特有の規約 #####
+   #TODO: cannot use both java and python 
+   # - exit_with_zero python script/validate_terms.py resources/term-dic.tsv tex/rule4-pos1.tex #TODO: implement exit_with_zero 
+   # - exit_with_one python script/validate_terms.py resources/term-dic.tsv tex/rule4-neg1.tex #TODO: implement exit_with_one
