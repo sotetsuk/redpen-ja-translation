@@ -79,3 +79,6 @@ script:
    #TODO: cannot use both java and python 
    # - exit_with_zero python script/validate_terms.py resources/term-dic.tsv tex/rule4-pos1.tex #TODO: implement exit_with_zero 
    # - exit_with_one python script/validate_terms.py resources/term-dic.tsv tex/rule4-neg1.tex #TODO: implement exit_with_one
+   # 不適切な訳語を使わない
+   - t tex/rule4-pos2.tex
+   - f tex/rule4-neg2.tex
