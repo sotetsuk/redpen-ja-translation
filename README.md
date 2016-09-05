@@ -40,8 +40,8 @@
 
 ### 03 日本語表現に関する規約
 
-- 日本語の数値表現を半角英数字に統一する（RedPen: JapaneseNumberExpression）
-  - e.g., ```1つ```, ```2つ```
+- 日本語の数値表現を漢数字に統一する（RedPen: JapaneseNumberExpression）
+  - e.g., ```一つ```, ```二つ```
 - カタカナ単語のゆらぎを減らす（RedPen: KatakanaSpellCheck）
   - e.g., ```オペレーションズ・リサーチ``` vs ```オペレーションズリサーチ```
 - 同じ文頭表現を過度に利用しない（RedPen: FrequentSentenceStart）

@@ -12,7 +12,7 @@
         </validator>
         <!-- RULE 03 -->
         <validator name="JapaneseNumberExpression">
-            <property name="mode" value="numeric" />
+            <property name="mode" value="kansuji" />
         </validator>
         <validator name="KatakanaSpellCheck">
             <!-- <property name="dict" value="" /> -->
