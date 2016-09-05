@@ -21,7 +21,7 @@ def load_list(path):
     return l
 
 
-def load_dict(path):
+def load_terms(path):
     """Load tsv dictionary file.
 
     :type path: str
@@ -30,7 +30,7 @@ def load_dict(path):
     :return:
 
     Example:
-    >>> dic = load_dict("../resources/term-dic.tsv")
+    >>> dic = load_terms("../resources/terms.tsv")
     """
 
     try:
@@ -41,7 +41,7 @@ def load_dict(path):
 
     dic = [[x.strip('\n').strip() for x in line.split('\t')] for line in lines]
     for line in dic:
-        if len(line) > 2:
+        if len(line) > 3 or len(line) < 2:
             raise IOError("failed to parse " + path)
 
     return dic
