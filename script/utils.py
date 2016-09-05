@@ -1,3 +1,12 @@
+from logging import getLogger, StreamHandler, INFO
+
+logger = getLogger(__name__)
+handler = StreamHandler()
+handler.setLevel(INFO)
+logger.setLevel(INFO)
+logger.addHandler(handler)
+
+
 def load_list(path):
     """Load list file.
 
@@ -42,7 +51,7 @@ def load_terms(path):
     dic = [[x.strip('\n').strip() for x in line.split('\t')] for line in lines]
     for line in dic:
         if len(line) > 3 or len(line) < 2:
-            raise IOError("failed to parse " + path)
+            logger.info("Skip '{}'".format(line))
 
     return dic
 
