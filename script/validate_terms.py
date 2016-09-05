@@ -34,6 +34,8 @@ def validate_terms(terms, iter_reader):
                 key, val, exception_list = term
                 exception_list = [exception.lower() for exception in exception_list]
                 has_exception = True
+            if not val:
+                continue
             if key in en_lower:
                 if val not in ja:
                     if has_exception:
