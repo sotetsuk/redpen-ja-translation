@@ -32,7 +32,7 @@ def validate_terms(terms, iter_reader):
                 key, val = term
             if len(term) == 3:
                 key, val, exception_list = term
-                exception_list = [exception.lower() for exception in exception_list]
+                exception_list = [exception.strip().lower() for exception in exception_list.split(',')]
                 has_exception = True
             if not val:
                 continue
