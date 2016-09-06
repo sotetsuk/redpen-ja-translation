@@ -22,6 +22,19 @@ logger.addHandler(handler)
 
 
 def validate_terms(terms, iter_reader):
+
+    def _exists(l, str):
+        for e in l:
+            if e in str:
+                return True
+        return False
+
+    def _found(l, str):
+        for e in l:
+            if e in str:
+                return e
+        return None
+
     code = 0
 
     for line_no, en, ja in iter_reader:
@@ -38,19 +51,16 @@ def validate_terms(terms, iter_reader):
                 continue
             if key in en_lower:
                 if val not in ja:
-                    if has_exception:
-                        for exception in exception_list:
-                            if exception in en_lower:
-                                info_msg = "[Skipped term validation] Found '{}' in L{} and found '{}' in L{}".format(key, line_no, exception, line_no)
-                                logger.info(info_msg)
-                                break
-                    else:
-                        error_msg = "[Term validation error] Found '{}' in L{} but Not found '{}' in L{}\n" \
-                            .format(key, line_no, val, line_no + 1)
-                        error_msg += "  L{}: {}\n".format(line_no, en.strip('\n'))
-                        error_msg += "  L{}: {}".format(line_no + 1, ja.strip('\n'))
-                        logger.error(error_msg)
-                        code = 1
+                    if has_exception and _exists(exception_list, en_lower):
+                        info_msg = "[Skipped term validation] Found '{}' in L{} and found '{}' in L{}".format(key, line_no, _found(exception_list, en_lower), line_no)
+                        logger.info(info_msg)
+                        break
+                    error_msg = "[Term validation error] Found '{}' in L{} but Not found '{}' in L{}\n" \
+                        .format(key, line_no, val, line_no + 1)
+                    error_msg += "  L{}: {}\n".format(line_no, en.strip('\n'))
+                    error_msg += "  L{}: {}".format(line_no + 1, ja.strip('\n'))
+                    logger.error(error_msg)
+                    code = 1
                 else:
                     info_msg = "[Successful term validation] Found '{}' in L{} and found '{}' in L{}" \
                         .format(key, line_no, val, line_no + 1)
