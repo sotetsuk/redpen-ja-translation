@@ -71,7 +71,7 @@ class LaTeXReader(object):
                     yield ret
                     ret = []
 
-                if line.startswith('%'):
+                if line.startswith('%') and not line.startswith('% @suppress'):
                     ret.append(line_no)
                     ret.append(line)
                     flg = True
