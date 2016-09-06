@@ -9,7 +9,7 @@ Options:
   -h --help             Show this screen.
 """
 
-from utils import load_terms, LaTeXReader
+from utils import load_tsv, LaTeXReader
 
 from docopt import docopt
 from logging import getLogger, StreamHandler, INFO
@@ -64,7 +64,7 @@ def main():
     terms_path = args['<terms>']
     tex_file = args['<texfile>']
 
-    terms = load_terms(terms_path)
+    terms = load_tsv(terms_path, [2, 3])
     reader = LaTeXReader(tex_file)
 
     code = validate_terms(terms, reader)
