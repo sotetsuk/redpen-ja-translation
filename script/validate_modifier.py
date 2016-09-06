@@ -9,7 +9,7 @@ Options:
   -h --help             Show this screen.
 """
 
-from utils import load_list, LaTeXReader
+from utils import load_tsv, LaTeXReader
 
 from docopt import docopt
 from logging import getLogger, StreamHandler, INFO
@@ -26,7 +26,8 @@ def validate_modifier(l, iter_reader):
 
     for line_no, en, ja in iter_reader:
         en_lower = en.lower()
-        for mod in l:
+        for mods in l:
+            mod = mods[0]
             if mod in en_lower:
                 if mod not in ja:
                     error_msg = "[Modifier validation error] Found '{}' in L{} but Not found '{}' in L{}\n" \
@@ -46,7 +47,7 @@ def main():
     list_path = args['<list>']
     tex_file = args['<texfile>']
 
-    l = load_list(list_path)
+    l = load_tsv(list_path, 1)
     reader = LaTeXReader(tex_file)
 
     code = validate_modifier(l, reader)
